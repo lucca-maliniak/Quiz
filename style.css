@@ -17,15 +17,18 @@ body {
 }
 
 .main-section {
+    position: relative;
     display: flex;
     flex-direction: column;
-    height: 70vh;
-    width: 40vw;
+    height: 50vh;
+    width: 30vw;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 3vh;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    transition: 0.3s all ease;
 }
 
 .category, .nQuestions, .difficulty {
@@ -47,10 +50,6 @@ body {
     border-radius: 8px;
     color: grey;
     padding-left: 10px;
-}
-
-.nQuestions-input {
-    border: 1px solid black;
 }
 
 .category-types:focus, .nQuestions-input:focus, .difficulty-type:focus {
@@ -127,7 +126,7 @@ body {
 
 .title-question {
     margin-bottom: 10px;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: grey;
     text-align: center;
     max-width: 80%;
@@ -140,4 +139,66 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+
+.alertWrongAnswer {
+    position: absolute;
+    font-size: 1.2rem;
+    color: grey;
+    text-align: center;
+    max-width: 80%;
+    top: 43.5vh;
+}
+
+.game-finished {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 30vw;
+}
+
+.final-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.finalScore {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.title-finish {
+    font-size: 1.1rem;
+    color: grey;
+}
+
+.buttonRestartGame {
+    cursor: pointer;
+    width: 23%;
+    height: 13%;
+    border-radius: 8px;
+    color: white;
+    border: 1px solid transparent;
+    background-color: #ffaa00;
+    font-size: 1.1rem;
+    transition: 0.3s all ease;
+}
+
+.buttonRestartGame:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.category-types, .nQuestions-input, .difficulty-type {
+    border: 1px solid #c2c2c29c;
+    font-size: 1.05rem;
+}
+
+.category-types:focus-within, .nQuestions-input:focus-within, .difficulty-type:focus-within {
+    border: 0.5px solid black;
 }

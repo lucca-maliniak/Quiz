@@ -7,20 +7,20 @@
     <title>Quiz</title>
 </head>
 <body>
-    <main class="main-section" mainSection>
+    <main id="main-section" class="main-section" mainSection>
         <div class="category">
-            <label for="Category" class="title">Choose a Category:</label>
-            <select class="category-types" category>
+            <label for="Category" class="title">Choose a Category: <span style="color: red;">*</span></label>
+            <select class="category-types" required category>
                 <option value="" class="type">Any Category</option>
             </select>
         </div>
         <div class="nQuestions">
-            <label for="nQuestions" class="title">Number of Questions:</label>
-            <input type="number" class="nQuestions-input" min="1" max="50" value="10" nQuestions>
+            <label for="nQuestions" class="title">Number of Questions: <span style="color: red;">*</span></label>
+            <input type="number" class="nQuestions-input" min="1" max="50" value="10" required nQuestions>
         </div>
         <div class="difficulty">
-            <label for="difficulty" class="title">Select Difficulty:</label>
-            <select class="difficulty-type" difficulty>
+            <label for="difficulty" class="title">Select Difficulty: <span style="color: red;">*</span></label>
+            <select class="difficulty-type" required difficulty>
                 <option value="" class="type" >Any Difficulty</option>
                 <option value="easy" class="type" >Easy</option>
                 <option value="medium" class="type" >Medium</option>
